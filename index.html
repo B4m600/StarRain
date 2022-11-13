@@ -6,20 +6,25 @@
 <link rel="shortcut icon" href="favicon.ico">
 </head>
 <style>
+/*:root{--ppp:155px;}
+.pp{border:1px solid red;line-height:/*var(--ppp)155px;}*/
+
 @keyframes demo{
 	to{transform:translateY(3000px);}
 	}
-
+@keyframes rota{
+	to{transform:rotate(360deg);}
+	}
 div{
 //opacity:0.5;
 text-align:center;
-position:absolute;top:0;left:0;height:12%|7*/;
+position:absolute;top:0;left:0;
 border-radius:90px 90px 90px 90px;
-animation:demo 5s infinite ease-out;
-color:rgb(255,255,0);/*line-height:155px;*/font-size:30px;
+animation:demo 5s infinite linear;
+color:gold;/*line-height:155px;*/font-size:30px;
 }
 </style>
-<body id="0" style="background:url('bg.jpg') no-repeat;background-size:cover;">
+<body id="0" style="background:url('bg4.jpg') no-repeat;background-size:cover;">
 <div>
 </div>
 <script>
@@ -27,8 +32,9 @@ color:rgb(255,255,0);/*line-height:155px;*/font-size:30px;
 /*use strick*/
 
 var width=document.body.clientWidth;console.log("Your width of screen:"+width);var n;
-if(width<1000){n=300}else(n=500);
-var color=new Array("rgba(255,255,100,0.4)","rgba(255,200,100,0.8)","rgba(240,255,0,0.8)","rgba(255,255,173,0.8)","rgba(255,255,200,0.8)","rgba(255,238,134,0.8)","rgba(255,225,158,0.8)");
+if(width<1000){n=150;/*document.documentElement.style.setProperty("--ppp","250px")*/}
+else{n=500;/*document.documentElement.style.setProperty("--ppp","155px")*/};
+var color=new Array("rgba(255,255,100,0.4)","rgba(255,200,100,0.4)","rgba(240,255,0,0.4)","rgba(255,255,173,0.4)","rgba(255,255,200,0.4)","rgba(255,238,134,0.8)","rgba(255,225,158,0.8)","cornflowerblue");
 var star=new Array("&#9733","&#10030","&#10017","&#10031")
 function choice(arr){return arr[parseInt(Math.random()*arr.length,10)]}
 const body=document.querySelector("body")
