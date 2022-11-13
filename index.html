@@ -1,0 +1,47 @@
+<!DOCTYPE HTML><html>
+<head>
+<title>B4m600-HeartRain</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="author" content="B4m600-南竺_QQ2656980584" />
+<link rel="shortcut icon" href="favicon.ico">
+</head>
+<style>
+@keyframes demo{
+	to{transform:translateY(3000px);}
+	}
+
+div{
+//opacity:0.5;
+text-align:center;
+position:absolute;top:0;left:0;height:12%|7*/;
+border-radius:90px 90px 90px 90px;
+animation:demo 5s infinite ease-out;
+color:rgb(255,255,0);/*line-height:155px;*/font-size:30px;
+}
+</style>
+<body id=0 style="background:url('bg.jpg') no-repeat;background-size:cover;">
+<div>
+</div>
+<script>
+//alert(document.body.clientWidth);
+/*use strick*/
+var width=document.body.clientWidth;console.log("Your width of screen:"+width);var n;
+if(width<1000){n=300}else(n=500);
+var color=new Array("rgba(255,255,100,0.4)","rgba(255,200,100,0.8)","rgba(240,255,0,0.8)","rgba(255,255,173,0.8)","rgba(255,255,200,0.8)","rgba(255,238,134,0.8)","rgba(255,225,158,0.8)");
+var star=new Array("&#9733","&#10030","&#10017","&#10031")
+function choice(arr){return arr[parseInt(Math.random()*arr.length,10)]}
+const body=document.querySelector("body")
+for(var i=1;i<=n;i++){
+	const rain=document.createElement('div');
+	rain.innerHTML=`<font style='opacity:2;'>${choice(star)}</font>`;
+	if(width<1000){rain.style.width="3.6%";rain.style.height="7%";rain.style.lineHeight="250px";}
+	else{rain.style.height="12%";rain.style.lineHeight="155px";};
+    rain.style.left+=Math.random()*body.offsetWidth+"px";
+    rain.style.animationDelay=Math.random()*-10+'s';/*负值取消前摇*/
+	rain.style.animationDuration=Math.random()*5+8+'s';
+	color1=choice(color);color2=color[3];st0=`linear-gradient(200deg,transparent,${color1})`
+	rain.style.background=st0;
+	body.appendChild(rain);
+}
+</script>
+</body>
