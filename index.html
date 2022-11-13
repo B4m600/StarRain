@@ -19,18 +19,20 @@ animation:demo 5s infinite ease-out;
 color:rgb(255,255,0);/*line-height:155px;*/font-size:30px;
 }
 </style>
-<body id=0 style="background:url('bg.jpg') no-repeat;background-size:cover;">
+<body id="0" style="background:url('bg.jpg') no-repeat;background-size:cover;">
 <div>
 </div>
 <script>
 //alert(document.body.clientWidth);
 /*use strick*/
+
 var width=document.body.clientWidth;console.log("Your width of screen:"+width);var n;
 if(width<1000){n=300}else(n=500);
 var color=new Array("rgba(255,255,100,0.4)","rgba(255,200,100,0.8)","rgba(240,255,0,0.8)","rgba(255,255,173,0.8)","rgba(255,255,200,0.8)","rgba(255,238,134,0.8)","rgba(255,225,158,0.8)");
 var star=new Array("&#9733","&#10030","&#10017","&#10031")
 function choice(arr){return arr[parseInt(Math.random()*arr.length,10)]}
 const body=document.querySelector("body")
+var temp=document.getElementById("1");if(width<1000){temp.style.backgroundAttachment="fixed";};
 for(var i=1;i<=n;i++){
 	const rain=document.createElement('div');
 	rain.innerHTML=`<font style='opacity:2;'>${choice(star)}</font>`;
