@@ -32,7 +32,7 @@ var color=new Array("rgba(255,255,100,0.4)","rgba(255,200,100,0.8)","rgba(240,25
 var star=new Array("&#9733","&#10030","&#10017","&#10031")
 function choice(arr){return arr[parseInt(Math.random()*arr.length,10)]}
 const body=document.querySelector("body")
-var temp=document.getElementById("1");if(width<1000){temp.style.backgroundAttachment="fixed";};
+var temp=document.getElementById("0");if(width<1000){temp.style.backgroundAttachment="fixed";};
 for(var i=1;i<=n;i++){
 	const rain=document.createElement('div');
 	rain.innerHTML=`<font style='opacity:2;'>${choice(star)}</font>`;
